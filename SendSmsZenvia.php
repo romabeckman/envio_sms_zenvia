@@ -54,7 +54,7 @@ class SendSmsZenvia {
     }
 
     public function envioUnico(int $numero, string $mensagem, \DateTime $data): bool {
-        $nPara = Zenvia::DDI_BR . $numero;
+        $nPara = self::DDI_BR . $numero;
 
         $sendSmsRequest = array(
             "from" => $this->remetente,
